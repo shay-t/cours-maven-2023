@@ -15,12 +15,13 @@
         <groupId>fr.imt.cours.IL-Maven-2023</groupId>
         <artifactId>Main-pom</artifactId>
         <version>1.0-SNAPSHOT</version>
+        <relativePath>../Main-pom.xml</relativePath>
     </parent>
 
     <properties>
         <cucumber.version>7.8.1</cucumber.version>
         <junit.version>5.9.1</junit.version>
-        <jdk.version>18</jdk.version>
+        <jdk.version>19</jdk.version>
     </properties>
 
     <build>
@@ -111,7 +112,6 @@
             </plugin>
         </plugins>
     </build>
-
     <dependencies>
         <!-- JUnit 5 dependency -->
         <dependency>
