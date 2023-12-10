@@ -10,6 +10,7 @@ import fr.imt.coffee.storage.cupboard.container.*;
 import fr.imt.coffee.storage.cupboard.exception.CupNotEmptyException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.junit.platform.commons.logging.LoggerFactory;
 
 import java.util.Random;
 
@@ -45,6 +46,7 @@ public class CoffeeMachine {
      */
     public void plugToElectricalPlug(){
         isPlugged = true;
+        logger.info("Coffee machine plugged to electrical plug.");
     }
 
     /**
@@ -83,19 +85,25 @@ public class CoffeeMachine {
      * @throws CannotMakeCremaWithSimpleCoffeeMachine Exception levée lorsque vous souhaitez faire un café type Crema avec un une machine classique
      */
     public CoffeeContainer makeACoffee(Container container, CoffeeType coffeeType) throws LackOfWaterInTankException, InterruptedException, MachineNotPluggedException, CupNotEmptyException, CoffeeTypeCupDifferentOfCoffeeTypeTankException, CannotMakeCremaWithSimpleCoffeeMachine {
-        if(isPlugged){
+        Logger logger = LogManager.getLogger(getClass());
+        if(!isPlugged){
+            logger.error("MachineNotPluggedException: You must plug your coffee machine.");
             throw new MachineNotPluggedException("You must plug your coffee machine.");
         }
 
         if (waterTank.getActualVolume() < container.getCapacity()){
+            logger.error("LackOfWaterInTankException: You must add more water in the water tank.");
             throw new LackOfWaterInTankException("You must add more water in the water tank.");
         }
 
+
         if (!container.isEmpty()){
-            throw new LackOfWaterInTankException("You must add more water in the water tank.");
+            logger.error("CupNotEmptyException: The cup must be empty for coffee preparation.");
+            throw new  CupNotEmptyException("The cup must be empty for coffee preparation.");
         }
 
         if(coffeeType != this.beanTank.getBeanCoffeeType()){
+            logger.error("CoffeeTypeCupDifferentOfCoffeeTypeTankException: The type of coffee to be made in the cup is different from that in the tank.");
             throw new CoffeeTypeCupDifferentOfCoffeeTypeTankException("The type of coffee to be made in the cup is different from that in the tank.");
         }
 
@@ -107,6 +115,7 @@ public class CoffeeMachine {
         }
 
         if(coffeeType.toString().contains("_CREMA")){
+            logger.error("CannotMakeCremaWithSimpleCoffeeMachine: You cannot make an espresso with a CoffeeMachine, please use EspressoCoffeeMachine");
             throw new CannotMakeCremaWithSimpleCoffeeMachine("You cannot make an espresso with a CoffeeMachine, please use EspressoCoffeeMachine");
         }
 
@@ -121,6 +130,7 @@ public class CoffeeMachine {
             coffeeContainer = new CoffeeMug((Mug) container, coffeeType);
 
         coffeeContainer.setEmpty(true);
+        logger.info("Coffee preparation successful.");
         return coffeeContainer;
     }
 

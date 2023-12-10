@@ -49,10 +49,10 @@
                         <id>createThriftDir</id>
                         <phase>test</phase>
                         <configuration>
-                            <tasks>
+                            <target>
                                 <delete dir="${env.HOME}/jacoco"/>
                                 <mkdir dir="${env.HOME}/jacoco"/>
-                            </tasks>
+                            </target>
                         </configuration>
                         <goals>
                             <goal>run</goal>
