@@ -1,4 +1,4 @@
-package fr.imt.coffee.machine.component;
+package fr.imt.shay.machine.machine.component;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

@@ -1,6 +1,7 @@
-package fr.imt.coffee.storage.cupboard.container;
+package fr.imt.shay.storage.storage.cupboard.container;
 
-import fr.imt.coffee.storage.cupboard.coffee.type.CoffeeType;
+
+import fr.imt.shay.storage.storage.cupboard.coffee.type.CoffeeType;
 
 public class CoffeeMug extends CoffeeContainer{
 

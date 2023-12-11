@@ -6,6 +6,8 @@
       <list>
         <option value="$PROJECT_DIR$/coffee-machine/pom.xml" />
         <option value="$PROJECT_DIR$/Main-pom.xml" />
+        <option value="$PROJECT_DIR$/coffee-machine/machine/pom.xml" />
+        <option value="$PROJECT_DIR$/coffee-machine/storage/pom.xml" />
       </list>
     </option>
     <option name="workspaceImportForciblyTurnedOn" value="true" />

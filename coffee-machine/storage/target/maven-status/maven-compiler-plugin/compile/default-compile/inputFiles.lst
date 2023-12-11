@@ -1,0 +1,10 @@
+D:\a\cours-maven-2023\coffee-machine\storage\src\main\java\fr\imt\shay\storage\storage\cupboard\container\CoffeeContainer.java
+D:\a\cours-maven-2023\coffee-machine\storage\src\main\java\fr\imt\shay\storage\storage\cupboard\container\Mug.java
+D:\a\cours-maven-2023\coffee-machine\storage\src\main\java\fr\imt\shay\storage\storage\cupboard\coffee\type\CoffeeType.java
+D:\a\cours-maven-2023\coffee-machine\storage\src\main\java\fr\imt\shay\storage\storage\cupboard\container\Cup.java
+D:\a\cours-maven-2023\coffee-machine\storage\src\main\java\fr\imt\shay\storage\storage\cupboard\container\CoffeeMug.java
+D:\a\cours-maven-2023\coffee-machine\storage\src\main\java\fr\imt\shay\storage\storage\cupboard\container\Container.java
+D:\a\cours-maven-2023\coffee-machine\storage\src\main\java\fr\imt\shay\storage\storage\cupboard\exception\CupNotEmptyException.java
+D:\a\cours-maven-2023\coffee-machine\storage\src\main\java\fr\imt\shay\storage\storage\cupboard\container\CoffeeCup.java
+D:\a\cours-maven-2023\coffee-machine\storage\src\main\java\fr\imt\shay\storage\storage\cupboard\exception\ExceptionContainerCreation.java
+D:\a\cours-maven-2023\coffee-machine\storage\src\main\java\fr\imt\shay\storage\Main.java

@@ -1,6 +1,7 @@
-package fr.imt.coffee.machine.component;
+package fr.imt.shay.machine.machine.component;
 
-import fr.imt.coffee.storage.cupboard.coffee.type.CoffeeType;
+
+import fr.imt.shay.storage.storage.cupboard.coffee.type.CoffeeType;
 
 public class BeanTank extends Tank{
 

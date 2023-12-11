@@ -1,4 +1,4 @@
-package fr.imt.coffee.machine.component;
+package fr.imt.shay.machine.machine.component;
 
 public class Tank {
     private final double maxVolume;

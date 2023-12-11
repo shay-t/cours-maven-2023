@@ -1,17 +1,17 @@
 package fr.imt.coffee;
 
-import fr.imt.coffee.machine.CoffeeMachine;
-import fr.imt.coffee.machine.EspressoCoffeeMachine;
-import fr.imt.coffee.machine.exception.CoffeeTypeCupDifferentOfCoffeeTypeTankException;
-import fr.imt.coffee.machine.exception.LackOfWaterInTankException;
-import fr.imt.coffee.machine.exception.MachineNotPluggedException;
-import fr.imt.coffee.storage.cupboard.FabricCupboardContainer;
-import fr.imt.coffee.storage.cupboard.coffee.type.CoffeeType;
-import fr.imt.coffee.storage.cupboard.container.Container;
-import fr.imt.coffee.storage.cupboard.container.Cup;
-import fr.imt.coffee.storage.cupboard.container.Mug;
-import fr.imt.coffee.storage.cupboard.exception.CupNotEmptyException;
-import fr.imt.coffee.storage.cupboard.exception.ExceptionContainerCreation;
+import fr.imt.shay.machine.CoffeeMachine;
+import fr.imt.shay.machine.EspressoCoffeeMachine;
+import fr.imt.shay.machine.exception.CoffeeTypeCupDifferentOfCoffeeTypeTankException;
+import fr.imt.shay.machine.exception.LackOfWaterInTankException;
+import fr.imt.shay.machine.exception.MachineNotPluggedException;
+import fr.imt.shay.storage.cupboard.FabricCupboardContainer;
+import fr.imt.shay.storage.cupboard.coffee.type.CoffeeType;
+import fr.imt.shay.storage.cupboard.container.Container;
+import fr.imt.shay.storage.cupboard.container.Cup;
+import fr.imt.shay.storage.cupboard.container.Mug;
+import fr.imt.shay.storage.cupboard.exception.CupNotEmptyException;
+import fr.imt.shay.storage.cupboard.exception.ExceptionContainerCreation;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

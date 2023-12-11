@@ -1,13 +1,14 @@
-package fr.imt.coffee.machine;
+package fr.imt.shay.machine.machine;
 
-import fr.imt.coffee.machine.component.*;
-import fr.imt.coffee.machine.exception.CannotMakeCremaWithSimpleCoffeeMachine;
-import fr.imt.coffee.machine.exception.CoffeeTypeCupDifferentOfCoffeeTypeTankException;
-import fr.imt.coffee.machine.exception.LackOfWaterInTankException;
-import fr.imt.coffee.machine.exception.MachineNotPluggedException;
-import fr.imt.coffee.storage.cupboard.coffee.type.CoffeeType;
-import fr.imt.coffee.storage.cupboard.container.*;
-import fr.imt.coffee.storage.cupboard.exception.CupNotEmptyException;
+
+import fr.imt.shay.machine.machine.component.*;
+import fr.imt.shay.machine.machine.exception.CannotMakeCremaWithSimpleCoffeeMachine;
+import fr.imt.shay.machine.machine.exception.CoffeeTypeCupDifferentOfCoffeeTypeTankException;
+import fr.imt.shay.machine.machine.exception.LackOfWaterInTankException;
+import fr.imt.shay.machine.machine.exception.MachineNotPluggedException;
+import fr.imt.shay.storage.storage.cupboard.coffee.type.CoffeeType;
+import fr.imt.shay.storage.storage.cupboard.container.*;
+import fr.imt.shay.storage.storage.cupboard.exception.CupNotEmptyException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.platform.commons.logging.LoggerFactory;
@@ -99,7 +100,7 @@ public class CoffeeMachine {
 
         if (!container.isEmpty()){
             logger.error("CupNotEmptyException: The cup must be empty for coffee preparation.");
-            throw new  CupNotEmptyException("The cup must be empty for coffee preparation.");
+            throw new CupNotEmptyException("The cup must be empty for coffee preparation.");
         }
 
         if(coffeeType != this.beanTank.getBeanCoffeeType()){
