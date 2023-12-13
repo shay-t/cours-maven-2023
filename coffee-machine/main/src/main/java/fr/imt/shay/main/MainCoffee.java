@@ -1,20 +1,19 @@
-package fr.imt.coffee;
+package fr.imt.shay.main;
 
-import fr.imt.shay.machine.CoffeeMachine;
-import fr.imt.shay.machine.exception.CannotMakeCremaWithSimpleCoffeeMachine;
-import fr.imt.shay.machine.exception.CoffeeTypeCupDifferentOfCoffeeTypeTankException;
-import fr.imt.shay.machine.exception.LackOfWaterInTankException;
-import fr.imt.shay.machine.exception.MachineNotPluggedException;
-import fr.imt.shay.storage.cupboard.FabricCupboardContainer;
-import fr.imt.shay.storage.cupboard.coffee.type.CoffeeType;
-import fr.imt.shay.storage.cupboard.container.Container;
-import fr.imt.shay.storage.cupboard.container.Cup;
-import fr.imt.shay.storage.cupboard.container.Mug;
-import fr.imt.shay.storage.cupboard.exception.CupNotEmptyException;
-import fr.imt.shay.storage.cupboard.exception.ExceptionContainerCreation;
+import fr.imt.shay.machine.machine.CoffeeMachine;
+import fr.imt.shay.machine.machine.exception.CannotMakeCremaWithSimpleCoffeeMachine;
+import fr.imt.shay.machine.machine.exception.CoffeeTypeCupDifferentOfCoffeeTypeTankException;
+import fr.imt.shay.machine.machine.exception.LackOfWaterInTankException;
+import fr.imt.shay.machine.machine.exception.MachineNotPluggedException;
+import fr.imt.shay.storage.storage.cupboard.coffee.type.CoffeeType;
+import fr.imt.shay.storage.storage.cupboard.container.Container;
+import fr.imt.shay.storage.storage.cupboard.container.Cup;
+import fr.imt.shay.storage.storage.cupboard.container.Mug;
+import fr.imt.shay.storage.storage.cupboard.exception.CupNotEmptyException;
+import fr.imt.shay.storage.storage.cupboard.exception.ExceptionContainerCreation;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
+import fr.imt.shay.storage.FabricCupboardContainer;
 
 public class MainCoffee {
 
@@ -33,7 +32,7 @@ public class MainCoffee {
 
         coffeeMachine.plugToElectricalPlug();
         coffeeMachine.addWaterInTank(2);
-        coffeeMachine.addCoffeeInBeanTank(1.5,CoffeeType.ROBUSTA);
+        coffeeMachine.addCoffeeInBeanTank(1.5, CoffeeType.ROBUSTA);
 
         logger.info(coffeeMachine.toString());
 

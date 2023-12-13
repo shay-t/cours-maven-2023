@@ -11,7 +11,6 @@ import fr.imt.shay.storage.storage.cupboard.container.*;
 import fr.imt.shay.storage.storage.cupboard.exception.CupNotEmptyException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.junit.platform.commons.logging.LoggerFactory;
 
 import java.util.Random;
 
@@ -91,6 +90,10 @@ public class CoffeeMachine {
             logger.error("MachineNotPluggedException: You must plug your coffee machine.");
             throw new MachineNotPluggedException("You must plug your coffee machine.");
         }
+        if(isOutOfOrder){
+            logger.warn("The machine is out of order. Please reset the coffee machine");
+            return null;
+        }
 
         if (waterTank.getActualVolume() < container.getCapacity()){
             logger.error("LackOfWaterInTankException: You must add more water in the water tank.");
@@ -108,12 +111,9 @@ public class CoffeeMachine {
             throw new CoffeeTypeCupDifferentOfCoffeeTypeTankException("The type of coffee to be made in the cup is different from that in the tank.");
         }
 
-        coffeeMachineFailure();
+        //coffeeMachineFailure();
 
-        if(isOutOfOrder){
-            logger.warn("The machine is out of order. Please reset the coffee machine");
-            return null;
-        }
+
 
         if(coffeeType.toString().contains("_CREMA")){
             logger.error("CannotMakeCremaWithSimpleCoffeeMachine: You cannot make an espresso with a CoffeeMachine, please use EspressoCoffeeMachine");
@@ -130,7 +130,7 @@ public class CoffeeMachine {
         if(container instanceof Mug)
             coffeeContainer = new CoffeeMug((Mug) container, coffeeType);
 
-        coffeeContainer.setEmpty(true);
+        coffeeContainer.setEmpty(false);
         logger.info("Coffee preparation successful.");
         return coffeeContainer;
     }

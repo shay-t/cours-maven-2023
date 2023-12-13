@@ -1,26 +1,26 @@
-package fr.imt.coffee;
+package fr.imt.shay.main;
 
-import fr.imt.shay.machine.CoffeeMachine;
-import fr.imt.shay.machine.EspressoCoffeeMachine;
-import fr.imt.shay.machine.exception.CoffeeTypeCupDifferentOfCoffeeTypeTankException;
-import fr.imt.shay.machine.exception.LackOfWaterInTankException;
-import fr.imt.shay.machine.exception.MachineNotPluggedException;
-import fr.imt.shay.storage.cupboard.FabricCupboardContainer;
-import fr.imt.shay.storage.cupboard.coffee.type.CoffeeType;
-import fr.imt.shay.storage.cupboard.container.Container;
-import fr.imt.shay.storage.cupboard.container.Cup;
-import fr.imt.shay.storage.cupboard.container.Mug;
-import fr.imt.shay.storage.cupboard.exception.CupNotEmptyException;
-import fr.imt.shay.storage.cupboard.exception.ExceptionContainerCreation;
+import fr.imt.shay.machine.machine.EspressoCoffeeMachine;
+import fr.imt.shay.machine.machine.exception.CoffeeTypeCupDifferentOfCoffeeTypeTankException;
+import fr.imt.shay.machine.machine.exception.LackOfWaterInTankException;
+import fr.imt.shay.machine.machine.exception.MachineNotPluggedException;
+import fr.imt.shay.storage.FabricCupboardContainer;
+import fr.imt.shay.storage.storage.cupboard.coffee.type.CoffeeType;
+import fr.imt.shay.storage.storage.cupboard.container.Container;
+import fr.imt.shay.storage.storage.cupboard.container.Cup;
+import fr.imt.shay.storage.storage.cupboard.container.Mug;
+import fr.imt.shay.storage.storage.cupboard.exception.CupNotEmptyException;
+import fr.imt.shay.storage.storage.cupboard.exception.ExceptionContainerCreation;
+import org.apache.logging.log4j.core.Logger;
 import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+
 
 public class MainEspresso {
     //Instanciation du logger à partir d'un LogManager.
     //On vient préciser le nom de la classe qui va produire des logs
     //Le logger va permettre de logger suivant différents niveaux :
     //INFO, WARNING, DEBUG, ERROR...
-    public static final Logger logger = LogManager.getLogger(MainEspresso.class);
+    public static final Logger logger = (Logger) LogManager.getLogger(MainEspresso.class);
 
     public static void main(String[] args) {
 
