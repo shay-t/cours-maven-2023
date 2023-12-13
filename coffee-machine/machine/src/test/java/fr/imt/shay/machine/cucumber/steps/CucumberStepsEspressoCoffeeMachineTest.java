@@ -2,7 +2,6 @@ package fr.imt.shay.machine.cucumber.steps;
 
 
 import fr.imt.shay.machine.machine.EspressoCoffeeMachine;
-import fr.imt.shay.machine.machine.exception.CannotMakeCremaWithSimpleCoffeeMachine;
 import fr.imt.shay.machine.machine.exception.CoffeeTypeCupDifferentOfCoffeeTypeTankException;
 import fr.imt.shay.machine.machine.exception.LackOfWaterInTankException;
 import fr.imt.shay.machine.machine.exception.MachineNotPluggedException;
@@ -62,7 +61,7 @@ public class CucumberStepsEspressoCoffeeMachineTest {
     }
 
     @And("I made a coffee {string} in the espresso machine")
-    public void iMadeAEspresso(String coffeeType) throws InterruptedException, CupNotEmptyException, LackOfWaterInTankException, MachineNotPluggedException, CoffeeTypeCupDifferentOfCoffeeTypeTankException, CannotMakeCremaWithSimpleCoffeeMachine{
+    public void iMadeAEspresso(String coffeeType) throws InterruptedException, CupNotEmptyException, LackOfWaterInTankException, MachineNotPluggedException, CoffeeTypeCupDifferentOfCoffeeTypeTankException {
 
         if (espressoMug != null)
             espressoContainerWithCoffee = espressoMachine.makeACoffee(espressoMug, CoffeeType.valueOf(coffeeType));
