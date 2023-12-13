@@ -1,4 +1,4 @@
-package fr.imt.shay.storage.storage.cupboard;
+package fr.imt.shay.main;
 
 import fr.imt.shay.storage.storage.cupboard.container.Container;
 import fr.imt.shay.storage.storage.cupboard.container.Cup;
